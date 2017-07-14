@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Speed First</string>
+    <string name="fartlek">Fartlek</string>
+    <string name="tempo">Tempo</string>
+    <string name="interval">Interval</string>
+    <string name="distance">Distance</string>
+</resources>

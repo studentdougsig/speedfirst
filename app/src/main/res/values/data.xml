@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="speed_array">
+        <item>Fast</item>
+        <item>Slow</item>
+    </string-array>
+    <string-array name="yes_no_array">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/selectFartlekTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Fartlek Type"
+        android:layout_marginTop="15dp"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        style="@drawable/bg_button"
+        android:id="@+id/customButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectFartlekTypeText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_button"
+        android:layout_centerHorizontal="true"
+        android:text="Custom"/>
+    <Button
+        android:id="@+id/ladderButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customButton"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_button"
+        android:layout_centerHorizontal="true"
+        android:text="Ladder"/>
+    <Button
+        android:id="@+id/consistentButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ladderButton"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_button"
+        android:layout_centerHorizontal="true"
+        android:text="Consistent"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:tint="@android:color/white"
+        app:elevation="4dp"/>
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/setupTable"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/consistentButton"
+            android:layout_above="@+id/continueButton">
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:id="@+id/totalDurationRow">
+                <TextView
+                    style="@style/FartlekOptionsLabel"
+                    android:text="Total Duration"
+                    />
+                <EditText
+                    style="@style/FartlekOptionsText"
+                    android:id="@+id/totalDurationField"
+                    android:hint="Enter time"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:id="@+id/consistentSlowDurationRow"
+                android:visibility="gone">
+                <TextView
+                    style="@style/FartlekOptionsLabel"
+                    android:text="Slow Duration"/>
+                <EditText
+                    style="@style/FartlekOptionsText"
+                    android:id="@+id/slowDurationField"
+                    android:hint="Enter time"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:id="@+id/consistentFastDurationRow"
+                android:visibility="gone">
+                 <TextView
+                     style="@style/FartlekOptionsLabel"
+                     android:text="Fast Duration"/>
+                <EditText
+                    style="@style/FartlekOptionsText"
+                    android:id="@+id/fastDurationField"
+                    android:hint="Enter time"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:id="@+id/ladderRoundtripOptionRow"
+                android:visibility="visible">
+                <TextView
+                    style="@style/FartlekOptionsLabel"
+                    android:text="Roundtrip Ladder"
+                    android:id="@+id/roundtripOption"/>
+                <android.support.v7.widget.AppCompatSpinner
+                    style="@style/FartlekOptionsText"
+                    android:id="@+id/roundtripOptionSpinner"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:id="@+id/ladderIncrementRow">
+                <TextView
+                    style="@style/FartlekOptionsLabel"
+                    android:text="Ladder Increment"/>
+                <EditText
+                    style="@style/FartlekOptionsText"
+                    android:id="@+id/ladderIncrementField"
+                    android:hint="Enter time"
+                    />
+            </TableRow>
+        </TableLayout>
+
+</RelativeLayout>
